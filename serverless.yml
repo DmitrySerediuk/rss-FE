@@ -1,4 +1,4 @@
-service: rss-app-cf-fe
+service: rss-app-cf-auto
 
 frameworkVersion: '2'
 
@@ -7,6 +7,12 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: eu-west-1
+
+environment:
+  DB_HOST: task4-ins.cw78xcxrwa3r.eu-west-1.rds.amazonaws.com
+  DB_PORT: 5432
+  DB_DATABASE: postgres
+  DB_USERNAME: SrJbNbHQUa
 
 plugins:
   - serverless-finch
@@ -18,7 +24,7 @@ plugins:
 custom:
 
   client:
-    bucketName: rss-app-cf-auto-fe
+    bucketName: rss-app-cf-auto-bucket
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
