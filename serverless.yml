@@ -8,12 +8,6 @@ provider:
   stage: dev
   region: eu-west-1
 
-environment:
-  DB_HOST: task4-ins.cw78xcxrwa3r.eu-west-1.rds.amazonaws.com
-  DB_PORT: 5432
-  DB_DATABASE: postgres
-  DB_USERNAME: SrJbNbHQUa
-
 plugins:
   - serverless-finch
   # 'serverless-single-page-app-plugin' is a custom plugin that located .serverless_plugins folder.
