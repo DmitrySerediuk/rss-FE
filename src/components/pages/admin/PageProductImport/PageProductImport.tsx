@@ -13,8 +13,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function setAuthTokenToLocalStorage(defaultKey='authToken'){
+  localStorage.setItem(defaultKey, 'RG1pdHJ5U2VyZWRpdWs6VEVTVF9QQVNTV09SRA==');
+}
+
 export default function PageProductImport() {
   const classes = useStyles();
+  setAuthTokenToLocalStorage();
 
   return (
     <div className={classes.content}>
