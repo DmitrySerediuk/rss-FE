@@ -10,6 +10,8 @@ import API_PATHS from "../../../constants/apiPaths";
 
 export default function Cart() {
   const dispatch = useDispatch();
+  
+
   useEffect(() => {
     axios.get(
         `${API_PATHS.cart}/profile/cart`,

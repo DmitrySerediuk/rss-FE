@@ -34,11 +34,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Products() {
   const classes = useStyles();
   const [products, setProducts] = useState<Product[]>([]);
-
+  console.log(`${API_PATHS.bff}/products/`);
   useEffect(() => {
     axios.get(`${API_PATHS.bff}/products/`)
        .then((res) => {
          console.log(res);
+       
          setProducts(Array.from(res.data.message))
         });
     //setProducts(productList);
